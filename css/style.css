@@ -1,24 +1,33 @@
-/* ===========================
-   H Core Global Solutions
-   Version 1
-=========================== */
+/* =====================================
+   H Core Global Solutions - Version 1
+===================================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#061421;
+    background:#071726;
     color:#ffffff;
+    line-height:1.6;
     overflow-x:hidden;
 }
 
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
 /*==========================
- NAVBAR
+HEADER
 ==========================*/
 
 header{
@@ -26,14 +35,12 @@ header{
     top:0;
     left:0;
     width:100%;
-    background:rgba(6,20,33,.95);
-    backdrop-filter:blur(10px);
-    z-index:1000;
+    background:rgba(7,23,38,.95);
+    backdrop-filter:blur(12px);
+    z-index:999;
 }
 
 nav{
-    width:90%;
-    margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -41,25 +48,22 @@ nav{
 }
 
 .logo{
-    font-size:30px;
+    font-size:28px;
     font-weight:700;
     color:#00d4ff;
 }
 
 nav ul{
-    display:flex;
     list-style:none;
-}
-
-nav ul li{
-    margin-left:35px;
+    display:flex;
+    gap:35px;
 }
 
 nav ul li a{
-    color:white;
     text-decoration:none;
-    transition:.3s;
+    color:white;
     font-weight:500;
+    transition:.3s;
 }
 
 nav ul li a:hover{
@@ -67,52 +71,43 @@ nav ul li a:hover{
 }
 
 /*==========================
- HERO
+HERO
 ==========================*/
 
 .hero{
     min-height:100vh;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    width:90%;
-    margin:auto;
-    padding-top:120px;
-    gap:50px;
+    padding-top:100px;
 }
 
-.hero-text{
-    flex:1;
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
 }
 
-.hero-text h4{
+.hero-content h4{
     color:#00d4ff;
     letter-spacing:4px;
     margin-bottom:15px;
 }
 
-.hero-text h1{
-    font-size:65px;
+.hero-content h1{
+    font-size:60px;
     line-height:1.2;
-    margin-bottom:15px;
+    margin-bottom:25px;
 }
 
-.hero-text span{
+.hero-content span{
     color:#00d4ff;
 }
 
-.hero-text h2{
-    font-size:34px;
-    margin-bottom:20px;
-    color:#ffffff;
-}
-
-.hero-text p{
+.hero-content p{
+    color:#d8d8d8;
     font-size:18px;
-    color:#cfcfcf;
-    line-height:1.8;
-    margin-bottom:40px;
-    max-width:650px;
+    margin-bottom:35px;
 }
 
 .hero-buttons{
@@ -121,104 +116,89 @@ nav ul li a:hover{
 }
 
 .btn{
+    display:inline-block;
     background:#00d4ff;
-    color:#061421;
+    color:#071726;
     text-decoration:none;
     padding:15px 35px;
-    border-radius:40px;
+    border-radius:50px;
     font-weight:600;
     transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 30px rgba(0,212,255,.4);
+    transform:translateY(-4px);
 }
 
 .btn-outline{
+    display:inline-block;
     border:2px solid #00d4ff;
     color:white;
     text-decoration:none;
     padding:15px 35px;
-    border-radius:40px;
+    border-radius:50px;
     transition:.3s;
 }
 
 .btn-outline:hover{
     background:#00d4ff;
-    color:#061421;
+    color:#071726;
 }
 
 .hero-image{
-    flex:1;
     display:flex;
     justify-content:center;
 }
 
-.globe{
+.hero-circle{
     width:360px;
     height:360px;
     border-radius:50%;
-    background:linear-gradient(45deg,#00d4ff,#0066ff);
+    background:linear-gradient(135deg,#00d4ff,#0066ff);
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:150px;
-    box-shadow:0 0 80px rgba(0,212,255,.5);
+    font-size:130px;
+    box-shadow:0 0 80px rgba(0,212,255,.45);
     animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
 
-0%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-20px);
-}
-
-100%{
-transform:translateY(0);
-}
+0%{transform:translateY(0);}
+50%{transform:translateY(-18px);}
+100%{transform:translateY(0);}
 /*==========================
- ABOUT
+ABOUT
 ==========================*/
 
 .about{
-    width:90%;
-    margin:100px auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    padding:100px 0;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
     gap:60px;
+    align-items:center;
 }
 
 .about-image{
-    flex:1;
     display:flex;
     justify-content:center;
-}
-
-.about-image{
+    align-items:center;
     width:320px;
     height:320px;
+    margin:auto;
     border-radius:50%;
-    background:linear-gradient(45deg,#00d4ff,#0066ff);
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    background:linear-gradient(135deg,#00d4ff,#0066ff);
     font-size:120px;
     box-shadow:0 0 60px rgba(0,212,255,.4);
 }
 
-.about-content{
-    flex:1;
-}
-
 .about-content h4{
     color:#00d4ff;
-    letter-spacing:3px;
+    letter-spacing:4px;
     margin-bottom:15px;
 }
 
@@ -228,177 +208,124 @@ transform:translateY(0);
 }
 
 .about-content p{
-    color:#cfcfcf;
-    line-height:1.8;
+    color:#d6d6d6;
     margin-bottom:20px;
+    line-height:1.8;
 }
 
 /*==========================
- SERVICES
+SERVICES
 ==========================*/
 
 .services{
-
-    width:90%;
-    margin:120px auto;
+    padding:100px 0;
     text-align:center;
-
 }
 
 .services h4{
-
     color:#00d4ff;
-    letter-spacing:3px;
-    margin-bottom:10px;
-
+    letter-spacing:4px;
+    margin-bottom:15px;
 }
 
 .services h2{
-
     font-size:42px;
-    margin-bottom:60px;
-
+    margin-bottom:50px;
 }
 
-.service-container{
-
+.services-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:30px;
-
 }
 
 .card{
-
-    background:#0b2236;
-
-    padding:40px 30px;
-
+    background:#0d2338;
+    padding:35px 25px;
     border-radius:20px;
-
-    transition:.4s;
-
+    transition:.3s;
     border:1px solid rgba(255,255,255,.05);
-
 }
 
 .card:hover{
-
-    transform:translateY(-12px);
-
-    box-shadow:0 15px 40px rgba(0,212,255,.25);
-
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,212,255,.25);
 }
 
 .icon{
-
-    font-size:60px;
-
+    font-size:55px;
     margin-bottom:20px;
-
 }
 
 .card h3{
-
-    margin-bottom:20px;
-
+    margin-bottom:15px;
 }
 
 .card p{
-
-    color:#d3d3d3;
-
+    color:#d6d6d6;
+    font-size:15px;
     line-height:1.7;
-
 }
 
 /*==========================
- PROCESS
+PROCESS
 ==========================*/
 
 .process{
-
-    width:90%;
-    margin:120px auto;
+    padding:100px 0;
     text-align:center;
-
 }
 
 .process h4{
-
     color:#00d4ff;
-    letter-spacing:3px;
-
+    letter-spacing:4px;
+    margin-bottom:15px;
 }
 
 .process h2{
-
     font-size:42px;
-    margin:15px 0 50px;
-
+    margin-bottom:50px;
 }
 
 .steps{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:25px;
-
 }
 
 .step{
-
-    background:#0b2236;
-
+    background:#0d2338;
     padding:35px;
-
     border-radius:20px;
-
-    transition:.4s;
-
+    transition:.3s;
 }
 
 .step:hover{
-
     background:#12314d;
-
 }
 
 .step h3{
-
     color:#00d4ff;
-
-    font-size:45px;
-
+    font-size:48px;
     margin-bottom:15px;
-
 }
 
 .step p{
-
     font-size:18px;
-
 }
-}
-/*==========================
- CONTACT
+}/*==========================
+CONTACT
 ==========================*/
 
 .contact{
-    width:90%;
-    margin:120px auto;
+    padding:100px 0;
     text-align:center;
-    background:#0b2236;
-    padding:70px 30px;
-    border-radius:25px;
 }
 
 .contact h4{
     color:#00d4ff;
-    letter-spacing:3px;
-    margin-bottom:10px;
+    letter-spacing:4px;
+    margin-bottom:15px;
 }
 
 .contact h2{
@@ -407,19 +334,22 @@ transform:translateY(0);
 }
 
 .contact p{
-    color:#d3d3d3;
-    margin-bottom:15px;
+    color:#d6d6d6;
     font-size:18px;
+    margin-bottom:15px;
+}
+
+.contact .btn{
+    margin-top:25px;
 }
 
 /*==========================
- FOOTER
+FOOTER
 ==========================*/
 
 footer{
-    margin-top:100px;
-    background:#04101c;
-    padding:40px 20px;
+    background:#04101b;
+    padding:40px 0;
     text-align:center;
     border-top:1px solid rgba(255,255,255,.08);
 }
@@ -427,16 +357,15 @@ footer{
 footer h3{
     color:#00d4ff;
     margin-bottom:15px;
-    font-size:28px;
 }
 
 footer p{
     color:#bdbdbd;
-    line-height:1.8;
+    margin:8px 0;
 }
 
 /*==========================
- BACKGROUND GLOW
+BACKGROUND EFFECTS
 ==========================*/
 
 body::before{
@@ -448,8 +377,8 @@ body::before{
     border-radius:50%;
     filter:blur(220px);
     opacity:.08;
-    top:-200px;
-    right:-200px;
+    top:-250px;
+    right:-250px;
     z-index:-1;
 }
 
@@ -462,13 +391,13 @@ body::after{
     border-radius:50%;
     filter:blur(220px);
     opacity:.08;
-    bottom:-200px;
-    left:-200px;
+    bottom:-250px;
+    left:-250px;
     z-index:-1;
 }
 
 /*==========================
- RESPONSIVE DESIGN
+RESPONSIVE
 ==========================*/
 
 @media(max-width:992px){
@@ -481,42 +410,21 @@ body::after{
     nav ul{
         flex-wrap:wrap;
         justify-content:center;
-        gap:15px;
+        gap:20px;
     }
 
-    nav ul li{
-        margin:0;
-    }
-
-    .hero{
-        flex-direction:column;
+    .hero-grid,
+    .about-grid{
+        grid-template-columns:1fr;
         text-align:center;
-        padding-top:160px;
     }
 
-    .hero-buttons{
-        justify-content:center;
-        flex-wrap:wrap;
-    }
-
-    .hero-text h1{
-        font-size:48px;
-    }
-
-    .hero-text h2{
-        font-size:28px;
-    }
-
-    .globe{
-        width:280px;
-        height:280px;
-        font-size:110px;
+    .hero-image{
         margin-top:40px;
     }
 
-    .about{
-        flex-direction:column;
-        text-align:center;
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .steps{
@@ -525,14 +433,44 @@ body::after{
 
 }
 
-@media(max-width:600px){
+@media(max-width:768px){
 
-    .hero-text h1{
-        font-size:36px;
+    .hero-content h1{
+        font-size:42px;
     }
 
-    .hero-text h2{
-        font-size:22px;
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .btn,
+    .btn-outline{
+        width:100%;
+        text-align:center;
+    }
+
+    .hero-circle{
+        width:250px;
+        height:250px;
+        font-size:90px;
+    }
+
+    .about-image{
+        width:240px;
+        height:240px;
+        font-size:90px;
     }
 
     .services h2,
@@ -540,22 +478,6 @@ body::after{
     .process h2,
     .contact h2{
         font-size:32px;
-    }
-
-    .steps{
-        grid-template-columns:1fr;
-    }
-
-    .globe{
-        width:220px;
-        height:220px;
-        font-size:80px;
-    }
-
-    .btn,
-    .btn-outline{
-        width:100%;
-        text-align:center;
     }
 
 }
