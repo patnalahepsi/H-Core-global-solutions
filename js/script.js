@@ -1,6 +1,20 @@
-console.log("Welcome to H Core Global Solutions");
+// H Core Global Solutions
 
-// Smooth fade-in animation
-window.addEventListener("load", () => {
-    document.body.style.opacity = "1";
+console.log("Website Loaded Successfully");
+
+window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
+});
+
+// Smooth animation for cards
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-10px)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0)";
+    });
 });
