@@ -2,120 +2,255 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
 
-background:#081b29;
+background:#061421;
+
 color:white;
+
+overflow-x:hidden;
+
+}
+
+header{
+
+position:fixed;
+
+width:100%;
+
+top:0;
+
+background:rgba(6,20,33,.9);
+
+backdrop-filter:blur(10px);
+
+z-index:999;
 
 }
 
 nav{
 
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
 
 padding:20px 8%;
-
-background:#071420;
 
 }
 
 .logo{
 
-font-size:28px;
-font-weight:bold;
-color:#00e5ff;
+font-size:32px;
+
+font-weight:700;
+
+color:#00d4ff;
 
 }
 
 nav ul{
 
 display:flex;
+
 list-style:none;
 
 }
 
-nav li{
+nav ul li{
 
-margin-left:30px;
+margin-left:35px;
 
 }
 
 nav a{
 
-text-decoration:none;
 color:white;
+
+text-decoration:none;
+
+font-weight:500;
+
 transition:.3s;
 
 }
 
 nav a:hover{
 
-color:#00e5ff;
+color:#00d4ff;
 
 }
 
 .hero{
 
-height:90vh;
-
 display:flex;
-justify-content:center;
+
+justify-content:space-between;
+
 align-items:center;
-text-align:center;
 
-padding:40px;
+min-height:100vh;
 
-}
-
-.hero-text{
-
-max-width:900px;
+padding:120px 8%;
 
 }
 
-.hero h1{
+.hero-left{
 
-font-size:60px;
-
-margin-bottom:25px;
+width:55%;
 
 }
 
-.hero p{
+.hero-left h4{
 
-font-size:22px;
+color:#00d4ff;
+
+letter-spacing:4px;
+
+margin-bottom:20px;
+
+}
+
+.hero-left h1{
+
+font-size:64px;
+
+line-height:1.2;
+
+margin-bottom:30px;
+
+}
+
+.hero-left span{
+
+color:#00d4ff;
+
+}
+
+.hero-left p{
+
+font-size:20px;
 
 line-height:1.8;
+
+color:#d8d8d8;
 
 margin-bottom:40px;
 
 }
 
+.buttons{
+
+display:flex;
+
+gap:20px;
+
+}
+
 .btn{
 
-background:#00e5ff;
+background:#00d4ff;
 
-padding:15px 40px;
+padding:15px 35px;
 
-border-radius:50px;
+border-radius:40px;
+
+color:#061421;
 
 text-decoration:none;
 
 font-weight:bold;
 
-color:#081b29;
-
-transition:.3s;
+transition:.4s;
 
 }
 
 .btn:hover{
 
-background:white;
+transform:translateY(-5px);
+
+}
+
+.btn2{
+
+border:2px solid #00d4ff;
+
+padding:15px 35px;
+
+border-radius:40px;
+
+color:white;
+
+text-decoration:none;
+
+transition:.4s;
+
+}
+
+.btn2:hover{
+
+background:#00d4ff;
+
+color:#061421;
+
+}
+
+.hero-right{
+
+width:40%;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.circle{
+
+width:350px;
+
+height:350px;
+
+border-radius:50%;
+
+background:linear-gradient(45deg,#00d4ff,#0066ff);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:120px;
+
+animation:float 4s ease-in-out infinite;
+
+box-shadow:0 0 80px #00d4ff;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
 
 }
