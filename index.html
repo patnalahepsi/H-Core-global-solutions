@@ -3,217 +3,558 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>H Core Global Solutions | AI &amp; Digital Innovation</title>
+<title>H Core Global Solutions | From Setbacks To Success</title>
+<meta name="description" content="H Core Global Solutions delivers reliable business process outsourcing across insurance operations, business operations, administrative support and process improvement.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=2">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
 <!-- ===== HEADER / NAV ===== -->
 <header class="site-header" id="top">
     <div class="container nav-inner">
-        <a href="#top" class="logo">
-            <span class="logo-mark" aria-hidden="true"></span>
-            H Core <span>Global Solutions</span>
+
+        <a href="#home" class="logo" data-target="home">
+            <svg class="logo-mark" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="1" y="1" width="32" height="32" rx="9" fill="url(#logoGrad)"/>
+                <path d="M10 10.5V23.5M10 17H17M17 10.5V23.5M20.5 10.5H24.5C25.6 10.5 26.5 11.4 26.5 12.5V13.2C26.5 14.3 25.6 15.2 24.5 15.2H20.5M20.5 15.2H24.7C25.7 15.2 26.5 16 26.5 17V21.2C26.5 22.3 25.6 23.2 24.5 23.2H20.5V10.5Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                    <linearGradient id="logoGrad" x1="1" y1="1" x2="33" y2="33" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#2F6FED"/>
+                        <stop offset="1" stop-color="#12B7A0"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span class="logo-text">H Core <span>Global Solutions</span></span>
         </a>
 
         <nav class="nav-links" id="navLinks">
             <a href="#home" class="nav-link active" data-target="home">Home</a>
             <a href="#about" class="nav-link" data-target="about">About</a>
             <a href="#services" class="nav-link" data-target="services">Services</a>
+            <a href="#industries" class="nav-link" data-target="industries">Industries</a>
             <a href="#process" class="nav-link" data-target="process">Process</a>
+            <a href="#careers" class="nav-link" data-target="careers">Careers</a>
             <a href="#contact" class="nav-link" data-target="contact">Contact</a>
         </nav>
+
+        <div class="header-actions">
+            <button class="search-toggle" id="searchToggle" aria-label="Search site" aria-expanded="false">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="8.5" cy="8.5" r="6.5" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M17 17L13.4 13.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <a href="#contact" class="btn btn-primary nav-cta" data-target="contact">Talk To Our Team</a>
+        </div>
 
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
     </div>
+
+    <div class="search-bar" id="searchBar">
+        <div class="container search-bar-inner">
+            <svg width="18" height="18" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8.5" cy="8.5" r="6.5" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M17 17L13.4 13.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <input type="text" id="searchInput" placeholder="Search services, industries, careers, contact info...">
+            <span class="search-note" id="searchNote"></span>
+        </div>
+    </div>
 </header>
 
 <main>
 
-<!-- ===== HERO ===== -->
-<section class="hero page active" id="home">
-    <div class="hero-network" aria-hidden="true" id="heroNetwork"></div>
-    <div class="container hero-grid">
+<!-- ===== HOME PAGE ===== -->
+<section class="page active" id="home">
 
-        <div class="hero-content">
-            <p class="eyebrow">Technology Partner</p>
-            <h1>Building the Future Through<br><span class="text-accent">AI &amp; Digital Innovation</span></h1>
+    <div class="hero">
+        <div class="container hero-inner">
+            <p class="eyebrow center">Business Process Services · B2B</p>
+            <h1>From Setbacks To Success</h1>
             <p class="hero-lead">
-                H Core Global Solutions empowers businesses through Artificial Intelligence,
-                Software Development, Cloud Technologies, Business Consulting and Digital Transformation.
+                We deliver reliable, accurate and efficient business support services that empower
+                organizations to improve productivity, reduce operational complexity, and focus on
+                what matters most — their customers and growth.
             </p>
             <div class="hero-actions">
-                <a href="#services" class="btn btn-primary">Our Services</a>
-                <a href="#contact" class="btn btn-outline">Contact Us</a>
+                <a href="#services" class="btn btn-primary" data-target="services">Our Services</a>
+                <a href="#contact" class="btn btn-outline" data-target="contact">Contact Us</a>
             </div>
-        </div>
-
-        <div class="hero-image">
-            <div class="hero-card">
-                <span class="hero-card-icon">🌐</span>
-                <p class="hero-card-text">Connecting ideas, systems and people through intelligent technology.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ===== ABOUT ===== -->
-<section class="about page" id="about">
-    <div class="container about-grid">
-
-        <div class="about-image">
-            <div class="about-badge">
-                <span class="about-badge-icon">💡</span>
-            </div>
-        </div>
-
-        <div class="about-content">
-            <p class="eyebrow">About Us</p>
-            <h2>Driving Innovation Worldwide</h2>
-            <p>
-                H Core Global Solutions is a modern technology company helping organizations
-                embrace Artificial Intelligence, Cloud Computing, Software Engineering and
-                Digital Innovation.
-            </p>
-            <p>
-                Our vision is to become a trusted global technology partner by delivering
-                reliable, scalable and future-ready digital solutions.
-            </p>
-            <a href="#services" class="btn btn-primary">Learn More</a>
-        </div>
-
-    </div>
-</section>
-
-<!-- ===== SERVICES ===== -->
-<section class="services page" id="services">
-    <div class="container">
-        <div class="section-head">
-            <p class="eyebrow">What We Do</p>
-            <h2>Our Services</h2>
-        </div>
-
-        <div class="services-grid">
-
-            <div class="service-card">
-                <span class="service-icon">🤖</span>
-                <h3>Artificial Intelligence</h3>
-                <p>AI-powered solutions for automation and business growth.</p>
-            </div>
-
-            <div class="service-card">
-                <span class="service-icon">💻</span>
-                <h3>Software Development</h3>
-                <p>Custom software tailored to business needs.</p>
-            </div>
-
-            <div class="service-card">
-                <span class="service-icon">☁️</span>
-                <h3>Cloud Technologies</h3>
-                <p>Secure cloud infrastructure and migration services.</p>
-            </div>
-
-            <div class="service-card">
-                <span class="service-icon">📱</span>
-                <h3>Mobile App Development</h3>
-                <p>Android and iOS applications with modern UI.</p>
-            </div>
-
-            <div class="service-card">
-                <span class="service-icon">📊</span>
-                <h3>Business Consulting</h3>
-                <p>Helping companies improve efficiency and productivity.</p>
-            </div>
-
-            <div class="service-card">
-                <span class="service-icon">🚀</span>
-                <h3>Digital Transformation</h3>
-                <p>Modernizing businesses through technology.</p>
-            </div>
-
         </div>
     </div>
-</section>
 
-<!-- ===== PROCESS ===== -->
-<section class="process page" id="process">
-    <div class="container">
-        <div class="section-head">
-            <p class="eyebrow">Our Approach</p>
-            <h2>How We Work</h2>
-        </div>
-
-        <div class="steps">
-
-            <div class="step">
-                <span class="step-index">01</span>
-                <h3>Discover</h3>
-                <p>We learn your goals, challenges and the systems you already rely on.</p>
+    <div class="stats-bar">
+        <div class="container stats-grid">
+            <div class="stat">
+                <span class="stat-number" data-count="4">0</span>
+                <p>Service categories</p>
             </div>
-
-            <div class="step">
-                <span class="step-index">02</span>
-                <h3>Design</h3>
-                <p>We architect a solution that's practical, scalable and built for growth.</p>
+            <div class="stat">
+                <span class="stat-number" data-count="23" data-suffix="+">0</span>
+                <p>Specialized services</p>
             </div>
-
-            <div class="step">
-                <span class="step-index">03</span>
-                <h3>Develop</h3>
-                <p>We build and test using modern engineering and AI-driven practices.</p>
+            <div class="stat">
+                <span class="stat-number" data-count="5">0</span>
+                <p>Industries served</p>
             </div>
-
-            <div class="step">
-                <span class="step-index">04</span>
-                <h3>Deliver</h3>
-                <p>We launch, support and continuously improve what we've built together.</p>
+            <div class="stat">
+                <span class="stat-number" data-count="100" data-suffix="%">0</span>
+                <p>Client confidentiality</p>
             </div>
-
         </div>
     </div>
-</section>
 
-<!-- ===== CONTACT ===== -->
-<section class="contact page" id="contact">
-    <div class="container contact-grid">
-
-        <div class="contact-content">
-            <p class="eyebrow">Get In Touch</p>
-            <h2>Let's Build Something Amazing</h2>
-            <p class="contact-lead">Tell us about your project and we'll get back to you shortly.</p>
-
-            <ul class="contact-details">
-                <li><span>Email</span> info@hcoreglobalsolutions.com</li>
-                <li><span>Phone</span> +91 XXXXX XXXXX</li>
+    <div class="problems">
+        <div class="container problems-inner">
+            <p class="eyebrow">The Challenge</p>
+            <h2>Operational work is quietly taxing your growth</h2>
+            <ul class="problem-list">
+                <li>Policy processing and renewals still handled manually, slowing turnaround?</li>
+                <li>Endorsements and document verification eating into your team's week?</li>
+                <li>No clear MIS or dashboard visibility into day-to-day operations?</li>
+                <li>SOPs and processes undocumented, making handoffs difficult?</li>
+                <li>Administrative work pulling your best people away from growth?</li>
             </ul>
+            <p class="problems-note">
+                H Core Global Solutions steps in wherever the gap is — bringing operational
+                excellence, process efficiency and dependable business support to the work that
+                keeps your organization running.
+            </p>
         </div>
+    </div>
 
-        <div class="contact-form-wrap">
-            <div class="contact-form" id="contactForm">
-                <div class="form-row">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name">
+</section>
+
+<!-- ===== ABOUT PAGE ===== -->
+<section class="page" id="about">
+
+    <div class="section-block">
+        <div class="container about-grid">
+            <div class="about-content">
+                <p class="eyebrow">About Us</p>
+                <h2>Every Successful Business Begins With A Vision</h2>
+                <p>
+                    H Core Global Solutions was founded with the determination to transform
+                    experience, resilience, and continuous learning into meaningful business
+                    solutions.
+                </p>
+                <p>
+                    The journey may include challenges, failures, and uncertainty. However, every
+                    setback provides valuable lessons that shape future success.
+                </p>
+                <p>
+                    Our commitment is to deliver professional services with integrity, accuracy,
+                    accountability, and excellence. This company is built on trust, consistency,
+                    and long-term relationships.
+                </p>
+                <p class="about-emphasis">
+                    We are not simply completing tasks.<br>
+                    We are building confidence.<br>
+                    We are creating opportunities.<br>
+                    We are helping businesses succeed.
+                </p>
+                <a href="#services" class="btn btn-primary" data-target="services">Learn More</a>
+            </div>
+
+            <div class="about-image">
+                <div class="about-badge">
+                    <span class="about-badge-icon">💡</span>
                 </div>
-                <div class="form-row">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com">
-                </div>
-                <div class="form-row">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your project"></textarea>
-                </div>
-                <button type="button" class="btn btn-primary btn-block" id="sendMessageBtn">Send Message</button>
-                <p class="form-note" id="formNote"></p>
             </div>
         </div>
-
     </div>
+
+    <!-- Founder Section -->
+    <div class="section-block alt">
+        <div class="container">
+            <p class="eyebrow center">Leadership</p>
+            <h2 class="center">Meet Our Founder</h2>
+
+            <div class="founder-card">
+                <div class="founder-avatar">HP</div>
+                <div class="founder-info">
+                    <h3>Hepsibha Patnala</h3>
+                    <p class="founder-role">Founder, H Core Global Solutions</p>
+                    <p class="founder-bio">
+                        Hepsibha brings over 7 years of experience in US Property &amp; Casualty
+                        insurance operations, having led policy administration, endorsements,
+                        renewals and cancellations teams as a Senior Process Executive and Team
+                        Lead. She founded H Core Global Solutions to bring that same operational
+                        rigor, accuracy and accountability to businesses looking for a trusted
+                        support partner.
+                    </p>
+                    <div class="founder-socials">
+                        <a href="https://www.linkedin.com/in/hepsibha-patnala-b907a9112" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="mailto:patnalahepsi@gmail.com">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mission -->
+    <div class="section-block">
+        <div class="container">
+            <div class="mission-grid">
+                <div>
+                    <p class="eyebrow">Our Mission</p>
+                    <h2>Reliable Support, Built To Scale With You</h2>
+                    <p>
+                        Our mission is to deliver reliable, accurate, and efficient business
+                        support services that empower organizations to improve productivity,
+                        reduce operational complexity, and focus on what matters most — their
+                        customers and growth.
+                    </p>
+                </div>
+                <ul class="mission-list">
+                    <li>Delivering consistent quality</li>
+                    <li>Building long-term partnerships</li>
+                    <li>Protecting client confidentiality</li>
+                    <li>Driving continuous improvement</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-block alt">
+        <div class="container">
+            <p class="eyebrow center">Why Choose Us</p>
+            <h2 class="center">What sets our approach apart</h2>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <span class="why-index">01</span>
+                    <h3>Deep insurance &amp; operations expertise</h3>
+                    <p>Hands-on experience running policy processing, renewals and endorsements — not theory, actual operational know-how.</p>
+                </div>
+                <div class="why-card">
+                    <span class="why-index">02</span>
+                    <h3>End-to-end process ownership</h3>
+                    <p>From data entry to SOP documentation to reporting, one partner carries the work through rather than handing it off.</p>
+                </div>
+                <div class="why-card">
+                    <span class="why-index">03</span>
+                    <h3>Confidentiality &amp; accountability built in</h3>
+                    <p>Every engagement is handled with the accuracy, quality assurance and trust that client data and operations demand.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ===== SERVICES PAGE ===== -->
+<section class="page" id="services">
+    <div class="section-block">
+        <div class="container">
+            <div class="section-head center">
+                <p class="eyebrow center">Our Services</p>
+                <h2>Operational Excellence, Process Efficiency &amp; Business Support</h2>
+                <p class="section-sub">Every engagement pairs the right process with people who understand your business.</p>
+            </div>
+
+            <div class="services-grid services-grid-wide">
+
+                <div class="service-card service-card-list">
+                    <span class="service-icon">📋</span>
+                    <h3>Insurance Operations</h3>
+                    <ul>
+                        <li>Policy Processing</li>
+                        <li>Policy Renewals</li>
+                        <li>Endorsements</li>
+                        <li>Document Verification</li>
+                        <li>Quality Assurance</li>
+                        <li>Administrative Claims Support</li>
+                    </ul>
+                </div>
+
+                <div class="service-card service-card-list">
+                    <span class="service-icon">📊</span>
+                    <h3>Business Operations</h3>
+                    <ul>
+                        <li>Data Entry</li>
+                        <li>Data Validation</li>
+                        <li>Excel Dashboard Development</li>
+                        <li>SOP Documentation</li>
+                        <li>Process Mapping</li>
+                        <li>Workflow Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="service-card service-card-list">
+                    <span class="service-icon">🗂️</span>
+                    <h3>Administrative Support</h3>
+                    <ul>
+                        <li>Virtual Assistance</li>
+                        <li>Email Management</li>
+                        <li>Document Preparation</li>
+                        <li>Reporting &amp; MIS</li>
+                        <li>CRM Updates</li>
+                        <li>Calendar Coordination</li>
+                    </ul>
+                </div>
+
+                <div class="service-card service-card-list">
+                    <span class="service-icon">🔁</span>
+                    <h3>Business Process Improvement</h3>
+                    <ul>
+                        <li>Process Reviews</li>
+                        <li>Productivity Analysis</li>
+                        <li>Operational Documentation</li>
+                        <li>Standardization</li>
+                        <li>Continuous Improvement Initiatives</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== INDUSTRIES PAGE ===== -->
+<section class="page" id="industries">
+    <div class="section-block">
+        <div class="container">
+            <div class="section-head center">
+                <p class="eyebrow center">Who We Serve</p>
+                <h2>Primary Industries</h2>
+                <p class="section-sub">Operational support built around the specific needs of each industry we work with.</p>
+            </div>
+
+            <div class="services-grid services-grid-wide">
+
+                <div class="service-card service-card-list">
+                    <span class="service-icon">🛡️</span>
+                    <h3>Insurance</h3>
+                    <ul>
+                        <li>Policy Administration</li>
+                        <li>Policy Renewals</li>
+                        <li>Endorsement Processing</li>
+                        <li>Document Verification</li>
+                        <li>Quality Assurance</li>
+                        <li>Administrative Claims Support</li>
+                    </ul>
+                </div>
+
+                <div class="service-card service-card-list">
+                    <span class="service-icon">💳</span>
+                    <h3>Financial Services</h3>
+                    <ul>
+                        <li>Data Processing</li>
+                        <li>Report Preparation</li>
+                        <li>Documentation Support</li>
+                        <li>Process Standardization</li>
+                    </ul>
+                </div>
+
+                <div class="service-card service-card-list">
+                    <span class="service-icon">💼</span>
+                    <h3>Professional Services</h3>
+                    <ul>
+                        <li>Consulting Firms</li>
+                        <li>Accounting Firms</li>
+                        <li>Legal Support Organizations</li>
+                        <li>Business Advisory Companies</li>
+                    </ul>
+                </div>
+
+                <div class="service-card service-card-list">
+                    <span class="service-icon">🏥</span>
+                    <h3>Healthcare Support</h3>
+                    <ul>
+                        <li>Administrative Documentation</li>
+                        <li>Data Management</li>
+                        <li>Process Documentation</li>
+                        <li>Operational Reporting</li>
+                    </ul>
+                </div>
+
+                <div class="service-card service-card-list">
+                    <span class="service-icon">🏢</span>
+                    <h3>Small &amp; Medium Enterprises</h3>
+                    <ul>
+                        <li>Business Administration</li>
+                        <li>Virtual Assistance</li>
+                        <li>Process Optimization</li>
+                        <li>Operational Support</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROCESS PAGE ===== -->
+<section class="page" id="process">
+    <div class="section-block">
+        <div class="container">
+            <div class="section-head center">
+                <p class="eyebrow center">How We Engage</p>
+                <h2>Roadmap To Transforming Your Operations</h2>
+                <p class="section-sub">We don't sell hours or seats. We design the plan, deliver it, and stay accountable for the result.</p>
+            </div>
+
+            <div class="phases">
+
+                <div class="phase">
+                    <span class="phase-label">Phase 1</span>
+                    <h3>Assess &amp; Map</h3>
+                    <p>We review current processes, documentation and bottlenecks across your operations to understand where support is needed most.</p>
+                </div>
+
+                <div class="phase">
+                    <span class="phase-label">Phase 2</span>
+                    <h3>Design &amp; Document</h3>
+                    <p>We build SOPs, workflows and reporting structures matched to how your team actually operates.</p>
+                </div>
+
+                <div class="phase">
+                    <span class="phase-label">Phase 3</span>
+                    <h3>Implement &amp; Transition</h3>
+                    <p>We take on the day-to-day processing, administration and support work with quality assurance built in.</p>
+                </div>
+
+                <div class="phase">
+                    <span class="phase-label">Phase 4</span>
+                    <h3>Support &amp; Improve</h3>
+                    <p>We continuously monitor, report and refine the operation so it keeps getting more efficient over time.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CAREERS PAGE ===== -->
+<section class="page" id="careers">
+
+    <div class="section-block">
+        <div class="container">
+            <div class="section-head center">
+                <p class="eyebrow center">Join Us</p>
+                <h2>Careers At H Core Global Solutions</h2>
+                <p class="section-sub">We're a small, hands-on team working across insurance operations and business support. Replace the roles below with your real openings.</p>
+            </div>
+
+            <div class="culture-grid">
+                <div class="culture-card">
+                    <span class="service-icon">🌱</span>
+                    <h3>Room To Grow</h3>
+                    <p>Work across real client operations spanning insurance, admin and process improvement from day one.</p>
+                </div>
+                <div class="culture-card">
+                    <span class="service-icon">🤝</span>
+                    <h3>Small, Direct Team</h3>
+                    <p>No layers of process — you'll work closely with the people making decisions.</p>
+                </div>
+                <div class="culture-card">
+                    <span class="service-icon">🌍</span>
+                    <h3>Remote Friendly</h3>
+                    <p>Flexible, output-focused ways of working across our client base.</p>
+                </div>
+            </div>
+
+            <div class="jobs-list">
+
+                <div class="job-row">
+                    <div>
+                        <h3>Insurance Process Executive</h3>
+                        <p class="job-meta">Full-time · Remote / Hybrid</p>
+                    </div>
+                    <a href="#contact" class="btn btn-outline btn-sm" data-target="contact">Apply</a>
+                </div>
+
+                <div class="job-row">
+                    <div>
+                        <h3>Business Analyst — Data &amp; MIS</h3>
+                        <p class="job-meta">Full-time · Remote / Hybrid</p>
+                    </div>
+                    <a href="#contact" class="btn btn-outline btn-sm" data-target="contact">Apply</a>
+                </div>
+
+                <div class="job-row">
+                    <div>
+                        <h3>Virtual Assistant / Administrative Support</h3>
+                        <p class="job-meta">Full-time · Remote / Hybrid</p>
+                    </div>
+                    <a href="#contact" class="btn btn-outline btn-sm" data-target="contact">Apply</a>
+                </div>
+
+            </div>
+
+            <p class="edit-note center">✏️ Update these listings with your actual open roles, or remove the section if you're not hiring yet.</p>
+
+            <div class="careers-cta">
+                <p>Don't see the right fit? Send your resume anyway.</p>
+                <a href="#contact" class="btn btn-primary" data-target="contact">Send Your Resume</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ===== CONTACT PAGE ===== -->
+<section class="page" id="contact">
+
+    <div class="section-block">
+        <div class="container contact-grid">
+
+            <div class="contact-content">
+                <p class="eyebrow">Get In Touch</p>
+                <h2>Let's Build Something Amazing</h2>
+                <p class="contact-lead">Tell us about your project and we'll get back to you shortly.</p>
+
+                <ul class="contact-details">
+                    <li><span>Email</span> info@hcoreglobalsolutions.com</li>
+                    <li><span>Phone</span> +91 7396935822</li>
+                    <li><span>Web</span> www.hcoreglobalsolutions.com</li>
+                </ul>
+
+                <div class="social-row">
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="YouTube">YouTube</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                </div>
+                <p class="edit-note">✏️ Add your real social profile links here once they're set up.</p>
+            </div>
+
+            <div class="contact-form-wrap">
+                <div class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" id="sendMessageBtn">Send Message</button>
+                    <p class="form-note" id="formNote"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cta-banner">
+        <div class="container cta-inner">
+            <h2>Ready to run your operations differently?</h2>
+            <p>30 minutes. No slide deck. Just your priorities and where we'd start.</p>
+            <a href="#contact" class="btn btn-light" data-target="contact">Talk To Our Team</a>
+        </div>
+    </div>
+
 </section>
 
 </main>
@@ -223,12 +564,23 @@
     <div class="container footer-inner">
         <div class="footer-brand">
             <p class="footer-title">H Core Global Solutions</p>
-            <p class="footer-tag">Empowering Businesses Through Innovation.</p>
+            <p class="footer-tag">From Setbacks To Success.</p>
+            <p class="footer-contact">info@hcoreglobalsolutions.com · +91 7396935822</p>
         </div>
+        <nav class="footer-links">
+            <a href="#about" data-target="about">About</a>
+            <a href="#services" data-target="services">Services</a>
+            <a href="#industries" data-target="industries">Industries</a>
+            <a href="#careers" data-target="careers">Careers</a>
+            <a href="#contact" data-target="contact">Contact</a>
+        </nav>
+        <p class="footer-legal">
+            <a href="#">Privacy Policy</a> · <a href="#">Accessibility</a>
+        </p>
         <p class="footer-copy">© 2026 H Core Global Solutions. All Rights Reserved.</p>
     </div>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js?v=5"></script>
 </body>
 </html>
