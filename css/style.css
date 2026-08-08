@@ -603,6 +603,49 @@ p { margin: 0 0 16px; color: var(--ink-500); }
 }
 .careers-cta p { font-size: 1.02rem; color: var(--ink-700); margin-bottom: 18px; }
 
+/* ---------- APPLICATION FORM ---------- */
+.application-form {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 36px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+}
+
+.file-upload {
+    position: relative;
+    border: 2px dashed var(--line);
+    border-radius: 10px;
+    padding: 22px 16px;
+    text-align: center;
+    background: var(--bg-alt);
+    transition: border-color 0.15s ease, background 0.15s ease;
+}
+.file-upload.drag-over { border-color: var(--accent); background: var(--accent-soft); }
+.file-upload.has-file { border-color: var(--accent-2); }
+
+.file-upload input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.file-upload-label {
+    font-size: 0.9rem;
+    color: var(--ink-500);
+    pointer-events: none;
+}
+
 /* ---------- CONTACT ---------- */
 .contact-grid {
     display: grid;
@@ -724,7 +767,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 @media (max-width: 980px) {
-    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .about-grid, .contact-grid, .form-grid { grid-template-columns: 1fr; }
     .about-image { order: -1; max-width: 220px; margin: 0 auto; }
     .services-grid, .why-grid, .culture-grid, .services-grid-wide, .mission-grid { grid-template-columns: repeat(2, 1fr); }
     .phases { grid-template-columns: repeat(2, 1fr); row-gap: 36px; }
