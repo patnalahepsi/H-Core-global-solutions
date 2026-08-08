@@ -157,6 +157,60 @@ function runSearch(query) {
     }
 }
 
+// ===== Careers: prefill role from clicked "Apply" button =====
+const appRoleSelect = document.getElementById('appRole');
+
+document.querySelectorAll('.apply-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const role = btn.getAttribute('data-role');
+        if (appRoleSelect && role) {
+            [...appRoleSelect.options].forEach((opt) => {
+                if (opt.value === role || opt.textContent.trim() === role) {
+                    appRoleSelect.value = opt.value;
+                }
+            });
+        }
+    });
+});
+
+// ===== Application form: file name display + Formspree check =====
+const applicationForm = document.getElementById('applicationForm');
+const fileInput = document.getElementById('appResume');
+const fileZone = document.getElementById('fileUploadZone');
+const fileLabel = document.getElementById('fileUploadLabel');
+const applicationNote = document.getElementById('applicationNote');
+
+if (fileInput && fileZone && fileLabel) {
+    fileInput.addEventListener('change', () => {
+        if (fileInput.files.length) {
+            fileLabel.textContent = '📄 ' + fileInput.files[0].name;
+            fileZone.classList.add('has-file');
+        } else {
+            fileLabel.textContent = '📎 Click to upload, or drag your resume here (PDF or Word, max 5MB)';
+            fileZone.classList.remove('has-file');
+        }
+    });
+
+    ['dragover', 'dragleave', 'drop'].forEach((evt) => {
+        fileZone.addEventListener(evt, (e) => {
+            e.preventDefault();
+            fileZone.classList.toggle('drag-over', evt === 'dragover');
+        });
+    });
+}
+
+if (applicationForm) {
+    applicationForm.addEventListener('submit', (e) => {
+        const notConfigured = applicationForm.getAttribute('action').includes('YOUR_FORM_ID');
+        if (notConfigured) {
+            e.preventDefault();
+            applicationNote.textContent =
+                'This form isn\u2019t connected yet \u2014 the site owner needs to add a Formspree endpoint before applications can be received.';
+            applicationNote.style.color = '#E23D3D';
+        }
+    });
+}
+
 // ===== Contact form (front-end only placeholder) =====
 const sendMessageBtn = document.getElementById('sendMessageBtn');
 const formNote = document.getElementById('formNote');
